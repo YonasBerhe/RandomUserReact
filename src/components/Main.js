@@ -41,6 +41,8 @@ var FakeUser = React.createClass({
           </input>
           <input value={this.state.email}>
           </input>
+          <input value={this.state.password}>
+          </input>
         </div>
 
       </div>
