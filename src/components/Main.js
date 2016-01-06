@@ -22,42 +22,46 @@ var FakeUser = React.createClass({
 
   render() {
     return (
-      <div>
-        <div style={styles.image}>
-          <img src={this.state.picture}/>
-        </div>
-            <input value={this.state.name}>
-            </input>
 
-          <input value={this.state.lastName}>
-          </input>
+<div>
+          <Button kind="primary">Radium Button</Button>
 
-          <input value={this.state.location}>
-          </input>
 
-          <input value={this.state.gender}>
-          </input>
-          <input value={this.state.city}>
-          </input>
-          <input value={this.state.email}>
-          </input>
-          <input value={this.state.password}>
-          </input>
-        </div>
+        // <div className="picturetype" style={styles.image}>
 
-      </div>
+          <img src={this.state.picture} />
+
+
+
+        // <div className="card1" style={styles.body}>
+          <span className="firstName" style={styles.font}>
+            {this.state.firstname}
+          </span>
+          <span className="lastName">
+            {this.state.lastName}
+          </span>
+          <span className="genName">
+            {this.state.gender}
+          </span>
+          <span className="locArea">
+            {this.state.location}
+          </span>
+
+          </div>
+
+
     );
   }
 });
+FakeUser = Radium(FakeUser);
 
 document.body.style.backgroundColor = "#3B5998";
 var styles = {
 
-  image: {
-    background: "#fff",
-
+  image:{
+    background: "#fff"
   },
-  font: {
+  font:{
     fontSize: 50
   }
 
@@ -66,5 +70,5 @@ var styles = {
 ReactDOM.render(
   <FakeUser source="https://randomuser.me/api/"/>, document.getElementById('app'));
 
-export default (FakeUser);
-// export default Radium(FakeUser);
+// export default (FakeUser);
+export default FakeUser;
