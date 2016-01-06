@@ -50,25 +50,43 @@ var FakeUser = React.createClass({
           </div>
 
 
-    );
+    )
   }
-});
-FakeUser = Radium(FakeUser);
+}),
 
-document.body.style.backgroundColor = "#3B5998";
-var styles = {
+// document.body.style.backgroundColor = "#3B5998";
+// var styles = {
+//   image:{
+//     background: "#fff"
+//   },
+//   font:{
+//     fontSize: 50
+//   }
+// };
 
-  image:{
-    background: "#fff"
-  },
-  font:{
-    fontSize: 50
-  }
-
-};
+//
+// var styles = {
+//   root: {
+//     display: "block"
+//   },
+//   item: {
+//     color: "black"
+//
+//     complete: {
+//       textDecoration: "line-through"
+//     },
+//
+//     due: {
+//       color: "red"
+//     }
+//   },
+// };
 
 ReactDOM.render(
-  <FakeUser source="https://randomuser.me/api/"/>, document.getElementById('app'));
+  <FakeUser source="https://randomuser.me/api/"/>, document.getElementById('app')
+  );
 
 // export default (FakeUser);
+
+FakeUser = Radium(FakeUser)
 export default FakeUser;
